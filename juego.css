@@ -12,6 +12,9 @@ h1{
     font-size: 50px;
     color: #fff;
 }
+#memoria{
+    cursor: pointer;
+}
 .juego{
     display: flex;
     justify-content: center;
@@ -34,6 +37,38 @@ h1{
     align-items: center;
     height: 80%;
     margin: 2%;
+}
+.ganador{
+    display: none;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 2px solid blueviolet;
+    background: radial-gradient(#0Ff, #f54c4c);
+    background-size: cover;
+    border-radius: 50%;
+    z-index: 10;
+    /*opacity: 0.6;*/
+    transition: 2s ease-out;
+}
+.ganador > img{
+    width: 100%;
+}
+.perdedor{
+    display: none;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 2px solid blueviolet;
+    background: radial-gradient(#f0f, #f54c4c);
+    background-size: cover;
+    border-radius: 50%;
+    z-index: 10;
+    /*opacity: 0.6;*/
+    transition: 2s ease-out;
+}
+.perdedor > img{
+    width: 100%;
 }
 button{
     width: 120px;

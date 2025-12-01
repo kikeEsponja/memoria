@@ -6,18 +6,22 @@ repetir.addEventListener('click', ()=>{
     location.reload();
 });
 
+let nivel1 = document.getElementById('nivel_1');
+nivel1.addEventListener('click', ()=>{
+    window.location.href = './memoria.html';
+});
+
 let inicio = document.getElementById('inicio');
 inicio.addEventListener('click', ()=>{
     window.location.href = '../index.html';
 });
-
 //********************************************************************************** */
 let juego = document.getElementById('carcasa');
 
 let primeraCarta = null;
 let segundaCarta = null;
 let bloqueoMesa = false;
-let movimientos = 24;
+let movimientos = 20;
 let moves = document.getElementById('movimientos');
 moves.textContent = movimientos;
 let habilitado = true;
@@ -55,7 +59,6 @@ function start(){
 }
 
 start();
-
 
 function handleCardClick(e){
     let card = e.currentTarget;
@@ -145,8 +148,8 @@ function ganador(){
     let ganador = document.createElement('h1');
     let information = document.getElementById('information');
     let emoji = document.getElementById('ganador');
-    //NIVEL 2
-    let nivel2 = document.createElement('button');
+    //NIVEL 3
+    //let nivel3 = document.createElement('button');
 
     for(let i = 0; i < 12; i++){
         let fichaFija = document.querySelector('.ficha');
@@ -161,11 +164,8 @@ function ganador(){
     ganador.style.color = '#ff0';
     aceptar.textContent = 'Vamos de nuevo!';
 
-    //NIVEL 2
-    nivel2.textContent = 'Nivel 2';
-    nivel2.addEventListener('click', () =>{
-        window.location.href = '../vistas/memoria2.html';
-    })
+    //NIVEL 3
+    //nivel3.textContent = 'Nivel 3';
 
     information.appendChild(contenedor);
     contenedor.appendChild(ganador);
@@ -173,7 +173,7 @@ function ganador(){
     emoji.style.display = 'block';
     emoji.style.opacity = '0';
     emoji.style.transition = 'opacity 2s ease';
-    contenedor.appendChild(nivel2);
+    //contenedor.appendChild(nivel3);
 
     setTimeout(() =>{
         emoji.style.opacity = '1';
@@ -210,8 +210,4 @@ function perdiste(){
     setTimeout(() =>{
         emojiLost.style.opacity = '1';
     }, 50);
-}
-/****************************NIVEL 2 **************************************************************/
-function nivel2(){
-    
 }
